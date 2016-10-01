@@ -24,7 +24,7 @@ cd ~/
 git config user.email "abdulrashid2@gmail.com"
 git config user.name "Abdul2"
 
-curl -u "Abdul2" --data '{"title":"key_installrevealjs","key":"$pub_key"}' https://api.github.com/user/keys/2 #this will require you to  enter password
+curl -u "Abdul2:$password" --data '{"title":"key_installrevealjs","key":"$pub_key"}' https://api.github.com/user/keys/ #this will require you to  enter password
 #curl --data "title=new_key&&key=$pub_key&&read_only=true"  /repos/:owner/:repo/keys
 
 #cat ~/.ssh/id_*.pub | ssh Abdul2@github.com 'cat > .ssh/authorized_keys'
